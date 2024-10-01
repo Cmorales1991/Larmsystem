@@ -16,6 +16,8 @@ public class DörrDetektor extends Larm implements Alarm{
         rumlista.add("Garage");
     }
 
+    // metod för att simulera dörrlarm i respektive rum
+
     private void aktiveraDörrLarmIRum() {
 
         Scanner scanner = new Scanner(System.in);
@@ -25,7 +27,7 @@ public class DörrDetektor extends Larm implements Alarm{
 
         System.out.print("Ditt val:");
         // Användarens val i menyn om hen väljer rätt rum i menyn ---> första utskrift + skickar ut sirenljud
-        // väljer använden ett rum nr som inte finns --->andra utskrift
+        // väljer användaren ett rum nr som inte finns ---> andra utskrift (else)
 
         int choice = scanner.nextInt();
             if (choice > 0 && choice <= rumlista.size()){
@@ -35,6 +37,8 @@ public class DörrDetektor extends Larm implements Alarm{
                 System.out.println("Ogiltigt val, larmet aktiverades inte.");
                 }
             }
+
+            //metod för att aktivera siren ---> utskriv ljudsignal
 
     public void sättPåSiren() {
         System.out.println("Ljudsignal: PIIP PIIP!");

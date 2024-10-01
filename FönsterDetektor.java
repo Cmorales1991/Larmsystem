@@ -20,6 +20,8 @@ public class FönsterDetektor extends Larm implements Alarm{
         rumlista.add("Garage");
     }
 
+    //metod för att aktivera fönsterlarm i respektive rum
+
     private void aktiveraFönsterLarmIRum() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Välj rum för att aktivera fönsterlarm:");
@@ -27,6 +29,7 @@ public class FönsterDetektor extends Larm implements Alarm{
             System.out.println((i + 1) + "." + rumlista.get(i));}
 
         System.out.print("Ditt val:");
+
         // Användarens val i menyn om hen väljer rätt rum i menyn ---> första utskrift + skickar ljudsignal
         // väljer använden ett rum nr som inte finns --->andra utskrift
         int choice = scanner.nextInt();
@@ -38,6 +41,7 @@ public class FönsterDetektor extends Larm implements Alarm{
             }
         }
 
+    //metod för att aktivera siren ---> utskriv ljudsignal
     public void sättPåSiren() {
         System.out.println("Ljudsignal: PIIP PIIP!");
     }

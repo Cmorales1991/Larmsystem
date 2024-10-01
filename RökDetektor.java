@@ -20,7 +20,7 @@ public class RökDetektor extends Larm implements Alarm {
         rumlista.add("Garage");
     }
 
-    // min metod för att simulera sprinkler i respektive rum
+    // metod för att aktivera/simulera sprinkler i respektive rum
 
     private void aktiveraSprinklerIRum() {
 
