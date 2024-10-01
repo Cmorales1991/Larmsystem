@@ -16,7 +16,7 @@ public class DörrDetektor extends Larm implements Alarm{
         rumlista.add("Garage");
     }
 
-    // metod för att simulera dörrlarm i respektive rum hej
+    // metod för att simulera dörrlarm i respektive rum
 
     private void aktiveraDörrLarmIRum() {
 
