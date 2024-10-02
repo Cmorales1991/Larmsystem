@@ -40,13 +40,13 @@ public class Rörelsedetektor extends Larm implements Alarm{
     //metod för att aktivera siren ---> utskriv ljudsignal
 
     public void sättPåSiren() {
+        System.out.println("INBROTT!!");
         System.out.println("Ljudsignal: PIIP PIIP!");
     }
 
     @Override
     public void larma() {
         if (aktiverat) {
-            System.out.println("Larmet aktiverat!");
             aktiveraRörelseLarm();
         } else {
             System.out.println("Inbrottslarmet är inte aktiverat!");

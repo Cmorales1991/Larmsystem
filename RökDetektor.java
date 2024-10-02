@@ -36,6 +36,7 @@ public class RökDetektor extends Larm implements Alarm {
 
         int choice = scanner.nextInt();
         if (choice > 0 && choice <= rumlista.size()){
+            System.out.println("BRAND!!");
             System.out.println("Sprinkler aktiveras i " + rumlista.get(choice - 1) + "!");
         } else {
             System.out.println("Ogiltigt val, sprinkler aktiverades inte.");
@@ -45,7 +46,6 @@ public class RökDetektor extends Larm implements Alarm {
     @Override
     public void larma() {
         if (aktiverat) {
-            System.out.println("BRANDLARM AKVITERAT!");
             aktiveraSprinklerIRum();
         } else {
             System.out.println("Brandlarmet är inte aktiverat!");
