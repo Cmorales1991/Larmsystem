@@ -47,7 +47,7 @@ public class LarmSystem {
             larmlista.get(2).larma();
             aktivLarm = true;
         } else if (slump == 3) {
-            System.out.println("Simulerar rörelselarm på baksidan");
+            System.out.println("Simulerar rörelselarm...");
             larmlista.get(3).larma();
             aktivLarm = true;
         }

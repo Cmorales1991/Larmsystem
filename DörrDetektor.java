@@ -12,7 +12,7 @@ public class DörrDetektor extends Larm implements Alarm{
         rumlista = new ArrayList<>();
         rumlista.add("Vardagsrum");
         rumlista.add("Hall");
-        rumlista.add("Sovrum 2");
+        //rumlista.add("Sovrum 2");
         rumlista.add("Garage");
     }
 
@@ -26,6 +26,7 @@ public class DörrDetektor extends Larm implements Alarm{
             System.out.println((i + 1) + "." + rumlista.get(i));}
 
         System.out.print("Ditt val:");
+
         // Användarens val i menyn om hen väljer rätt rum i menyn ---> första utskrift + skickar ut sirenljud
         // väljer användaren ett rum nr som inte finns ---> andra utskrift (else)
 
@@ -37,13 +38,11 @@ public class DörrDetektor extends Larm implements Alarm{
                 System.out.println("Ogiltigt val, larmet aktiverades inte.");
                 }
             }
-
             //metod för att aktivera siren ---> utskriv ljudsignal
 
     public void sättPåSiren() {
         System.out.println("Ljudsignal: PIIP PIIP!");
     }
-
 
     @Override
     public void larma() {

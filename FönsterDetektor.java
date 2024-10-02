@@ -32,6 +32,7 @@ public class FönsterDetektor extends Larm implements Alarm{
 
         // Användarens val i menyn om hen väljer rätt rum i menyn ---> första utskrift + skickar ljudsignal
         // väljer använden ett rum nr som inte finns --->andra utskrift
+
         int choice = scanner.nextInt();
             if (choice > 0 && choice <= rumlista.size()) {
                 System.out.println("Inbrottslarmet aktiveras i " + rumlista.get(choice - 1) + "!");

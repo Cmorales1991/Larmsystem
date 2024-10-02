@@ -30,8 +30,10 @@ public class RökDetektor extends Larm implements Alarm {
             System.out.println((i + 1) + "." + rumlista.get(i));}
 
         System.out.print("Ditt val:");
+
         // Användarens val i menyn om hen väljer rätt rum i menyn ---> första utskrift
         // väljer använden ett rum nr som inte finns --->andra utskrift
+
         int choice = scanner.nextInt();
         if (choice > 0 && choice <= rumlista.size()){
             System.out.println("Sprinkler aktiveras i " + rumlista.get(choice - 1) + "!");
@@ -49,11 +51,4 @@ public class RökDetektor extends Larm implements Alarm {
             System.out.println("Brandlarmet är inte aktiverat!");
         }
     }
-
 }
-
-
-
-
-
-

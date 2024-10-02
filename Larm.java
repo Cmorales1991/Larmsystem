@@ -30,6 +30,7 @@ public abstract class Larm implements Alarm {
     }
 
     public boolean isAktiverat(){
+
         return aktiverat;
     }
 
