@@ -1,39 +1,39 @@
 package Huset;
 
 public abstract class Larm implements Alarm {
-    protected boolean aktiverat;
-    private String larmTyp;
+
+    protected boolean active;
+    private String larmType;
 
     public Larm() {
     }
 
-    public Larm(String larmTyp){
-        this.larmTyp = larmTyp;
-        this.aktiverat = false;
+    public Larm(String larmType){
+        this.larmType = larmType;
+        this.active = false;
     }
 
-    public void aktivera(){
-        if (!aktiverat) {
-            aktiverat = true;
-            System.out.println("Alla " + larmTyp + " är aktiverat!");
-        } else {
-            System.out.println("Alla " + larmTyp + " är redan aktiverade!");
-        }
-    }
-    public void avAktivera(){
-        if (aktiverat) {
-            aktiverat = false;
-            System.out.println("Alla " + larmTyp + " är nu avaktiverat!");
-        } else {
-            System.out.println("Alla " + larmTyp + " är redan avaktiverad!");
-        }
-    }
+//    public void activate(){
+//        if (!active) {
+//            active = true;
+//            System.out.println("Alla " + larmType + " är aktiverat!");
+//        } else {
+//            System.out.println("Alla " + larmType + " är redan aktiverade!");
+//        }
+//    }
+//    public void deActivate(){
+//        if (active) {
+//            active = false;
+//            System.out.println("Alla " + larmType + " är nu avaktiverat!");
+//        } else {
+//            System.out.println("Alla " + larmType + " är redan avaktiverad!");
+//        }
+//    }
+//
+//    public boolean isactive(){
+//        return active;
+//    }
 
-    public boolean isAktiverat(){
-
-        return aktiverat;
-    }
-
-    public abstract void larma();
+    public abstract void larms();
 
 }

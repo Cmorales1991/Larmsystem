@@ -1,5 +1,5 @@
 package Huset;
 
 public interface Alarm {
-    void larma();
+    void larms();
 }
