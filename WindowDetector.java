@@ -9,7 +9,11 @@ public class WindowDetector extends Larm implements Alarm{
     }
 
     public void activateAlarm() {
-        activateSiren();
+        if (isActive) {
+            activateSiren();
+        } else {
+            System.out.println("Inbrottslarmet är inte aktiverat!");
+        }
     }
 
     public void activateSiren() {

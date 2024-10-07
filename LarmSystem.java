@@ -32,7 +32,7 @@ public class LarmSystem {
             room.activateAlarms();}
         }
         if (activeLarm) {
-                System.out.println("Alla larm har aktiverats.");
+            System.out.println("Alla larm har aktiverats.");
         }else {
             System.out.println("Alla larm är redan aktiverade.");
         }
@@ -53,11 +53,20 @@ public class LarmSystem {
     }
 
     public void restoreAlarm() {
+        boolean activeLarm = false;
+        for (Room room : rooms) {
+            if (room.areAlarmsActive()) {
+                activeLarm = true;
+                room.restoreAlarms();
+            } else if (!room.areAlarmsActive()) {
+                activeLarm = false;
+                room.restoreAlarms();
+            }
+        }
         if (activeLarm) {
-            System.out.println("Återställer larmet...");
-            activeLarm = false;
+            System.out.println("Alla larm har återställts.");
         } else {
-            System.out.println("Inget larm att återställa.");
+            System.out.println("Inga larm behövs återställas.");
         }
     }
 
@@ -101,7 +110,7 @@ public class LarmSystem {
                 if (alarmChoice >= 0 && alarmChoice < availableAlarms.size()) {
                     String selectedAlarm = availableAlarms.get(alarmChoice);
 
-                    // Anrop på triggers efter användern valt som är i room classen
+                    // Anrop på triggers efter användern valt larm som är i room classen
 
                     if (selectedAlarm.equals("Brandlarm")) {
                         randomRoom.trigger("smoke");

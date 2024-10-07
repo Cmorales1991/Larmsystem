@@ -31,10 +31,6 @@ public class Room {
         this.alarmsActive = false;
     }
 
-    public boolean areAlarmsActive() {
-        return alarmsActive;
-    }
-
     // Metod som skapar och returnerar en lista med rum +
     // Skapande av rum med olika antal detektorer
 
@@ -100,6 +96,13 @@ public class Room {
         movementTriggers.setActive(false);
     }
 
+    public void restoreAlarms() {
+        alarmsActive = true;
+    }
+
+    public boolean areAlarmsActive() {
+        return alarmsActive;
+    }
     public void trigger(String alarmType) {
         if (alarmType.equals("smoke")) {
             if (smokeTriggers.isActive()) {
