@@ -128,7 +128,7 @@ public class Room {
         if (alarmType.equals("window")) {
             if (windowTriggers.isActive()) {
                 System.out.println("Inbrottlarm utlöses i " + name + "!");
-                windowTriggers.activateAlarm(); // Aktiverar siren
+                windowTriggers.activateSiren();// Aktiverar siren
             } else {
                 System.out.println("Det finns inget inbrott i " + name);
             }

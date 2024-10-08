@@ -7,16 +7,14 @@ import java.util.Scanner;
 public class LarmSystem {
     private ArrayList<Larm> larmlist;
     private final ArrayList<Room> rooms;
-    private Random random;
-    private Scanner scanner;
-    private boolean activeLarm;
+    private final Random random;
+    private final Scanner scanner;
 
     public LarmSystem() {
         larmlist = new ArrayList<>();
         this.rooms = Room.rooms();
         this.random = new Random();
         this.scanner = new Scanner(System.in);
-        activeLarm = false;
         larmlist.add(new SmokeDetector());
         larmlist.add(new DoorDetector());
         larmlist.add(new WindowDetector());
