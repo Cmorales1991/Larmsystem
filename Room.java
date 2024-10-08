@@ -1,7 +1,6 @@
 package Huset;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Room {
     private String name;
